@@ -107,8 +107,10 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const dot = x1 * x2 + y1 * y2;
+  const cross = x1 * y2 - y1 * x2;
+  return Math.atan2(Math.abs(cross), dot);
 }
 
 /**
@@ -124,7 +126,7 @@ function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
  *     5     => 5
  *     0     => 0
  */
-function getLastDigit(/* value */) {
+function getLastDigit(value) {
   throw new Error('Not implemented');
 }
 
